@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlowersApp.Models
 {
-    public enum FlowerUpkeepDifficulty
+    public enum flowerUpkeepDifficulty
     {
         Easy,
         Medium,
@@ -20,6 +20,6 @@ namespace FlowersApp.Models
         public string Description { get; set; }
         public DateTimeOffset DateAdded { get; set; }
         public long MarketPrice { get; set; }
-        public FlowerUpkeepDifficulty flowerUpkeepDifficulty { get; set; }
+        public flowerUpkeepDifficulty flowerUpkeepDifficulty { get; set; }
      }
 }
