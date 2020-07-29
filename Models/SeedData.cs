@@ -26,7 +26,7 @@ namespace FlowersApp.Models
                         Description = "Has thorns",
                         DateAdded = DateTime.Now,
                         MarketPrice = 10,
-                        flowerUpkeepDifficulty = flowerUpkeepDifficulty.Medium
+                        FlowerUpkeepDifficulty = FlowerUpkeepDifficulty.Medium
                     },
 
                    new Flower
@@ -35,7 +35,7 @@ namespace FlowersApp.Models
                        Description = "Does not has thorns",
                        DateAdded = DateTime.UtcNow,
                        MarketPrice = 15,
-                       flowerUpkeepDifficulty = flowerUpkeepDifficulty.Easy
+                       FlowerUpkeepDifficulty = FlowerUpkeepDifficulty.Easy
                    }
                 );
                 context.SaveChanges();

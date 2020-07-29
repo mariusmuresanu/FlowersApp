@@ -16,8 +16,8 @@ namespace FlowersApp.ModelValidators
 				.InclusiveBetween(5, context.Flowers.Select(f => f.MarketPrice).Max());
 			RuleFor(x => x.DateAdded)
 				.LessThan(DateTime.Now);
-			RuleFor(x => x.flowerUpkeepDifficulty)
-				.Equal(flowerUpkeepDifficulty.Easy)
+			RuleFor(x => x.FlowerUpkeepDifficulty)
+				.Equal(FlowerUpkeepDifficulty.Easy)
 				.When(x => x.MarketPrice >= 5 && x.MarketPrice <= 10);
 		}
 	}
