@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace FlowersApp.ModelValidators
 {
-    public class FlowerValidator : AbstractValidator<Flower> {
-	public FlowerValidator()
+    public class FlowerValidator : AbstractValidator<Flower> 
+	{
+		public FlowerValidator(FlowersDbContext context)
 		{
 
 			RuleFor(x => x.MarketPrice)
-				.InclusiveBetween(5, 1000);
+				.InclusiveBetween(5, context.Flowers.Select(f => f.MarketPrice).Max());
 			RuleFor(x => x.DateAdded)
 				.LessThan(DateTime.Now);
 			RuleFor(x => x.flowerUpkeepDifficulty)
